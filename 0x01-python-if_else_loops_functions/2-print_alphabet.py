@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyz")
+ascii_alphabet = ["abcdefghijklmnopqrstuvwxyz"]
+for alphabet in ascii_alphabet:
+    print(alphabet)
