@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if arguments == 0:
         print("0 arguments.")
     elif arguments == 1:
-        print(arguments, " argument:")
+        print("1 argument:")
     else:
         print(arguments, " arguments:")
     for count in range(arguments):
