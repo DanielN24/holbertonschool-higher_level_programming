@@ -7,8 +7,7 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif arguments == 1:
         print(arguments, " argument:")
-        print("{}:".format(arguments), sys.argv)
     else:
         print(arguments, " arguments:")
-        for count in range(arguments):
-            print("{}: {}".format(count + 1, sys.argv[count + 1]))
+    for count in range(arguments):
+        print("{}: {}".format(count + 1, sys.argv[count + 1]))
