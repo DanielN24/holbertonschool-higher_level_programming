@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A rectangle with all four sides equal."""
+"""empty class Square that defines a square."""
 
 
 class Square:
