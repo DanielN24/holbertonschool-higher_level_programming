@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-"""class Square that defines a square."""
+"""Define a class Square."""
 
 
 class Square:
-    """this class represent a square"""
+    """Represent a square."""
 
     def __init__(self, size=0):
-        """initialize a square
-        args: size = size of square"""
+        """Initialize a new square.
+        Args:
+            size (int): The size of the new square.
+        """
         self.size = size
 
-    @property   # Getter
+    @property
     def size(self):
-        """get the size of the square"""
+        """Get/set the current size of the square."""
         return (self.__size)
 
-    @size.setter  # Setter
+    @size.setter
     def size(self, value):
-        """set and validate the size"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -25,29 +26,29 @@ class Square:
         self.__size = value
 
     def area(self):
-        """returns the current square area"""
+        """Return the current area of the square."""
         return (self.__size * self.__size)
 
-    def __ab__(self, other):
+    def __eq__(self, other):
         """Define the == comparision to a Square."""
         return self.area() == other.area()
 
-    def __bc__(self, other):
+    def __ne__(self, other):
         """Define the != comparison to a Square."""
         return self.area() != other.area()
 
-    def __cd__(self, other):
+    def __lt__(self, other):
         """Define the < comparison to a Square."""
         return self.area() < other.area()
 
-    def __de__(self, other):
+    def __le__(self, other):
         """Define the <= comparison to a Square."""
         return self.area() <= other.area()
 
-    def __ef__(self, other):
+    def __gt__(self, other):
         """Define the > comparison to a Square."""
         return self.area() > other.area()
 
-    def __fg__(self, other):
+    def __ge__(self, other):
         """Define the >= compmarison to a Square."""
         return self.area() >= other.area()
