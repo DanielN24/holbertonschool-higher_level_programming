@@ -10,12 +10,12 @@ class Square:
         args: size = size of square"""
         self.__size = size
 
-    @property # Getter
+    @property   # Getter
     def size(self):
         """get the size of the square"""
         return (self.__size)
 
-    @size.setter # Setter
+    @size.setter  # Setter
     def size(self, value):
         """set and validate the size"""
         if not isinstance(size, int):
