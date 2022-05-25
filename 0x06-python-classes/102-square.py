@@ -41,7 +41,7 @@ class Square:
         """Define the < comparison to a Square."""
         return self.area() < other.area()
 
-    def __less_same__(self, other):
+    def __lessorsame__(self, other):
         """Define the <= comparison to a Square."""
         return self.area() <= other.area()
 
@@ -49,6 +49,6 @@ class Square:
         """Define the > comparison to a Square."""
         return self.area() > other.area()
 
-    def __greater_same__(self, other):
+    def __greaterorsame__(self, other):
         """Define the >= compmarison to a Square."""
         return self.area() >= other.area()
