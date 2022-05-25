@@ -18,11 +18,6 @@ class Square:
         """get the size of the square"""
         return (self.__size)
 
-    @property
-    def position(self):
-        """get the position of the square"""
-        return (self.__position)
-
     @size.setter  # Setter
     def size(self, value):
         """set and validate the size"""
@@ -31,6 +26,11 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """get the position of the square"""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
