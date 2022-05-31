@@ -29,7 +29,7 @@ class Rectangle:
         """get the height of the Rectangle"""
         return (self.__height)
 
-    @height.setter   #setter
+    @height.setter   # setter
     def height(self, value):
         """set and validate the height"""
         if not isinstance(value, int):
