@@ -7,7 +7,7 @@ class MyList(list):
 
     def __init__(self):
         """ initialize a Rectangle """
-        super().__init__()
+        super.__init__()
 
     def print_sorted(self):
         """ prints the list, but sorted (ascending sort) """
