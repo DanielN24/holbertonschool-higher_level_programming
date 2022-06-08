@@ -1,48 +1,16 @@
 #!/usr/bin/python3
-""" class BaseGeometry """
-
-
-class BaseGeometry:
-    """ BaseGeometry class """
-
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    """ class Rectangle that defines a rectangle """
-
-    def __init__(self, width, height):
-        """ initialize a Rectangle
-        args1: width = width of Rectangle
-        args2: height = height of Rectangle """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        return self.__width * self.__height
-
-    def __str__(self):
-        return ("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
+"""Defines a Rectangle subclass Square."""
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ class Square that defines a Square """
+    """Represent a square."""
 
     def __init__(self, size):
+        """Initialize a new square.
+        Args:
+            size (int): The size of the new square.
+        """
         self.integer_validator("size", size)
-        self.__size = size
         super().__init__(size, size)
-
-    def area(self):
-        """returns the Square area"""
-
-        return self.__size * self.__size
+        self.__size = size
