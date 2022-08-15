@@ -8,7 +8,7 @@ function factorial (number) {
   return number * factorial(number - 1);
 }
 
-const { argv } = require("process");
+const { argv } = require('process');
 const number = parseInt(argv[2]);
 
 console.log(factorial(number));
