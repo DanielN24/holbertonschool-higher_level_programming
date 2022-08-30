@@ -13,7 +13,7 @@ if __name__ == "__main__":
         host='localhost', user=argv[1], passwd=argv[2],
         db=argv[3])
     cursor = database.cursor()
-    cursor.excute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
