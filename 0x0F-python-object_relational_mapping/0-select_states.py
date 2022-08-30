@@ -8,16 +8,15 @@ from sys import argv
 
 
 def main():
-    '''def main'''
+    '''main'''
     database = MySQLdb.connect(
-        host='localhost', username=argv[1], password=argv[2],
-        database=argv[3])
+        host='localhost', user=argv[1], passwd=argv[2],
+        db=argv[3])
     cursor = database.cursor()
-    cursor.excute("SELECT * FROM states ORDER BY id ASC")
+    cursor.excute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
-    cursor.close()
 
 
 if __name__ == "__main__":
