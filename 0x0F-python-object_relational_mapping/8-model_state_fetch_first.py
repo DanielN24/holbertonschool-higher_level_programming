@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/python3
 """Displays all states fom of a given state from the database hbtn_0e_6_usa"""
 
